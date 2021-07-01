@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>My first chart using FusionCharts Suite XT</title>
+    <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+    <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+    <script type="text/javascript">
+	FusionCharts.ready(function(){
+    var revenueChart = new FusionCharts({
+        "type": "column2d",
+        "renderAt": "chartContainer",
+        "width": "350",
+        "height": "500",
+        "dataFormat": "json",
+        "dataSource": {
+            "chart": {
+                "caption": "Quarterly revenue for last year",
+                "subCaption": "Harry's SuperMart",
+                "palettecolors": "#2874A6",
+                "useplotgradientcolor": "0",
+                "yAxisName": "Revenues (In USD)",
+                "theme": "fint",
+                "showvalues": "0",
+                "yaxismaxvalue": "40000",
+                "yaxisminvalue": "0"
+            },
+            "data": [{
+                    "label": "Q1",
+                    "value": "16000"
+                },
+                {
+                    "label": "Q2",
+                    "value": "25300"
+                },
+                {
+                    "label": "Q3",
+                    "value": "10140"
+                },
+                {
+                    "label": "Q4",
+                    "value": "19140"
+                }
+            ]
+        }
+    });
+    revenueChart.render();
+	})
+	</script>
+</head>
+<body>
+<div id="chartContainer">FusionCharts XT will load here!</div>
+</body>
+</html>
